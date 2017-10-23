@@ -1,0 +1,8 @@
+#--- DH-PHP handlers ---
+#AddHandler php-cgi .php
+#Action php-cgi /cgi-bin/dispatch.cgi
+
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
+
